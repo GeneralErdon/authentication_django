@@ -57,6 +57,9 @@ SIMPLE_JWT = {
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
     'UPDATE_LAST_LOGIN': True,
+    # Default alghorithm and Signing Key specification
+    'SIGNING_KEY': env.str("JWT_SIGNING_KEY"),
+    "ALGORITHM": "HS256",
 }
 
 REST_FRAMEWORK = {
@@ -75,6 +78,8 @@ REST_FRAMEWORK = {
     )
 
 }
+
+
 
 
 # Application definition
